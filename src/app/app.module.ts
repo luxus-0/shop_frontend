@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { DefaultModule } from './layouts/default/default.module';
 import { FullpageModule } from './layouts/fullpage/fullpage.module';
 import { SharedModule } from "./shared/shared.module";
+import { FullpageadminModule } from './layouts/fullpageadmin/fullpageadmin.module';
+import { AdminComponent } from './modules/admin/admin.component';
+import { AdminModule } from './modules/admin/admin.module';
 
 @NgModule({
     declarations: [
@@ -17,10 +20,13 @@ import { SharedModule } from "./shared/shared.module";
         AppRoutingModule,
         DefaultModule,
         FullpageModule,
-        SharedModule
+        SharedModule,
+        FullpageadminModule,
+        AdminModule
     ],
     exports:[
-      SharedModule
+      SharedModule,
+      AdminModule
     ]
 })
 export class AppModule { }
