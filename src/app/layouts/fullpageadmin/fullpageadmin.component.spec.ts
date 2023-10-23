@@ -6,10 +6,14 @@ describe('FullpageadminComponent', () => {
   let component: FullpageadminComponent;
   let fixture: ComponentFixture<FullpageadminComponent>;
 
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ FullpageadminComponent ]
+    })
+    .compileComponents();
+  });
+
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [FullpageadminComponent]
-    });
     fixture = TestBed.createComponent(FullpageadminComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

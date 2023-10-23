@@ -1,5 +1,5 @@
-<app-sidebar>
-    <div>
-        Sidebar
-    </div>
-</app-sidebar>
+<mat-selection-list [multiple]="false">
+    <mat-list-option *ngFor="let category of categories">
+        <a routerLink="{{'/categories/' + category.slug}}">{{category.name}}</a>
+    </mat-list-option>
+</mat-selection-list>
